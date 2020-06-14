@@ -1,0 +1,40 @@
+.bg-light {
+  background-color: #aaaeb373 !important;
+}
+.bg-dark {
+  background-color: #65605cad  !important;
+}
+.fontSize18 {
+  font-size: 18px;
+}
+
+/* .navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 10rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+} */
+
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #343a40;
+}
+
+@media (min-width: 768px)
+{
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+}
+}

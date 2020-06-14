@@ -1,0 +1,49 @@
+
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+  <a class="navbar-brand" href="#">
+    <img src="" width="200" height="30" class="d-inline-block align-top" alt="" src="../../assets/whitelogo.png">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarCollapse" aria-controls="navbarCollapse"
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+
+    <ul class="navbar-nav mr-auto fontSize18">
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >{{homeText}}<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/aboutus' ]">{{aboutUsText}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/about' ]">{{portfolioText}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/about' ]">E-CATALOG</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/contactus' ]" routerLinkActive="active">{{contactUsText}}</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold" href="javascript: location.reload();" (click)="switchLanguage()" >
+          <span>TH</span>/<span class="FocusEN">EN</span></a>
+      </li>
+    </ul>
+
+    <form class="form-inline mt-2 mt-md-0" >
+
+      <div class = "" style="width: 120px; height: 50px; background-color: orange;" >
+
+      </div>
+
+
+    </form>
+
+  </div>
+</nav>
