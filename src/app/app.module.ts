@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ServiceSliderComponent } from './home/service-slider/service-slider.component';
 
 
 
@@ -20,7 +21,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HomeComponent,
     FooterComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ServiceSliderComponent
   ],
   imports: [
     BrowserModule,
