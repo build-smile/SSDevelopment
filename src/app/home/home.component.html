@@ -64,7 +64,8 @@
       <p class="lead">{{profileCompany}}
 
       </p>
-      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-warning" style="font-weight: 900; color: white;"
+      [routerLink]="[ '/aboutus' ]">Read More</button>
     </div>
     <div class="col-md-5 order-md-2 ml-0 pt-2">
       <img src="../../assets/image/myCompany.jpg" width="400" height="300"/>
@@ -74,15 +75,15 @@
 
 
 
-  <hr class="featurette-divider">
+  <!-- <hr class="featurette-divider"> -->
 
 <app-service-slider></app-service-slider>
 
 
 
-  <hr class="featurette-divider order-md-2">
+  <!-- <hr class="featurette-divider order-md-2"> -->
 
-  <div class="row featurette order-md-1">
+  <div class="row featurette order-md-1 mt-5">
     <div class="col-md-6 order-md-1">
       <iframe width="500" height="315" src="https://www.youtube.com/embed/Y4B4zLDYtaA" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -92,12 +93,12 @@
 
       <div class="col-md-6 order-md-2">
         <div class="Flipsnack">
-          <!-- <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=f7tibifnv"
-          width="500" height="315" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen>
-        </iframe> -->
-        <iframe src="https://online.flippingbook.com/view/768196/"
+          <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=f7tibifnv"
           width="500" height="315" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen>
         </iframe>
+        <!-- <iframe src="https://online.flippingbook.com/view/768196/"
+          width="500" height="315" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen>
+        </iframe> -->
 
       </div>
 
@@ -113,37 +114,11 @@
   <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
-<hr class="featurette-divider">
-<h3 class="font-weight-bold text-center" >OUR CLIENT</h3>
-<div class="row mt-5 ">
-  <div class="col-md-auto border-right border-bottom " *ngFor="let item of ourClient1">
-    <div class="thumbnail mb-5">
-
-        <img [src]="item" alt="Lights" width="150" height="80">
 
 
-    </div>
-
-  </div>
-
-
-
+<!-- <hr class="featurette-divider"> -->
 </div>
-
-<div class="row mb-5">
-  <div class="col-md-auto border-right" *ngFor="let item of ourClient2">
-    <div class="thumbnail mt-5">
-
-        <img [src]="item" alt="Lights" width="150" height="80">
-
-
-    </div>
-
-  </div>
-
-  </div>
-
-</div>
+<app-ourclient></app-ourclient>
 
 
 

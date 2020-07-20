@@ -10,7 +10,15 @@
 .fontSize15 {
   font-size: 15px;
 }
-
+.fontSize25 {
+  font-size: 25px;
+}
+ul{
+  list-style: none;
+}
+.icon-smaller {
+  font-size: smaller;
+}
 /* .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;

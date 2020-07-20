@@ -20,22 +20,6 @@ export class HomeComponent implements OnInit {
   './assets/image/slide/9.jpg',
   './assets/image/slide/10.jpg'];
 
-  ourClient1 =
-  ['assets/image/Ourclient/AirChina_Logo_Star.png',
-   'assets/image/Ourclient/Bakeawish.jpg',
-   'assets/image/Ourclient/Bangkok_Airways_logo.png',
-   'assets/image/Ourclient/BBQ.jpg',
-   'assets/image/Ourclient/CP-LAND.jpg',
-  ];
-  ourClient2 =
-  [
-   'assets/image/Ourclient/Isetan_logo.jpg',
-   'assets/image/Ourclient/Kinokuniya.jpg',
-   'assets/image/Ourclient/MUIC.png',
-   'assets/image/Ourclient/Satriwit.jpg',
-   'assets/image/Ourclient/Toyota-logo.png',
-  ]
-
   languageCode: string;
   language: Language[];
   profileCompany: string;

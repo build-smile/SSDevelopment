@@ -10,6 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ServiceSliderComponent } from './home/service-slider/service-slider.component';
+import { OurclientComponent } from './home/ourclient/ourclient.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ECatalogComponent } from './e-catalog/e-catalog.component';
+
 
 
 
@@ -22,7 +26,10 @@ import { ServiceSliderComponent } from './home/service-slider/service-slider.com
     FooterComponent,
     AboutUsComponent,
     ContactUsComponent,
-    ServiceSliderComponent
+    ServiceSliderComponent,
+    OurclientComponent,
+    PortfolioComponent,
+    ECatalogComponent
   ],
   imports: [
     BrowserModule,

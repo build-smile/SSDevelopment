@@ -22,10 +22,10 @@
         <a class="nav-link font-weight-bold" [routerLink]="[ '/aboutus' ]">{{aboutUsText}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/about' ]">{{portfolioText}}</a>
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/portfolio' ]">{{portfolioText}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/about' ]">E-CATALOG</a>
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/ecatalog' ]">E-CATALOG</a>
       </li>
       <li class="nav-item">
         <a class="nav-link font-weight-bold" [routerLink]="[ '/contactus' ]" routerLinkActive="active">{{contactUsText}}</a>
@@ -37,14 +37,16 @@
       </li>
     </ul>
 
-    <form class="form-inline  mt-md-0" >
 
-      <div class = "" style="width: 150px; height: 50px; background-color: orange;" >
-
-      </div>
-
-
-    </form>
 
   </div>
+  <div class="collapse navbar-collapse ml-5 " id="navbarCollapse" style="background-color: orange;position: relative;">
+    <ul class="navbar fontSize25 vertical-center" style="background-color: orange;">
+      <li class="nav-item mr-3"><i class="fab fa-line text-white icon-smaller"></i></li>
+      <li class="nav-item mr-3"><i class="fas fa-phone-square-alt text-white icon-smaller"></i></li>
+      <li class="nav-item mr-3"><i class="fas fa-envelope text-white icon-smaller"></i></li>
+
+    </ul>
+  </div>
+
 </nav>
