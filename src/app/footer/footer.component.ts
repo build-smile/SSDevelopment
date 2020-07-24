@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Language } from '../shared/language.model';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private languageService: LanguageService) { }
+  languageCode: string;
+  language: Language[];
+  HeadOfficeAddress: string;
+  HeadOfficePhone: string;
+  HeadOfficeWorkDay: string;
+  HeadeOffice: string;
+  showroom: string;
+  showroomAdress: string;
   ngOnInit() {
+    this.getLanguage();
   }
+  getLanguage() {
+    this.languageService.getLanguage(this.languageCode, 'footer').subscribe(
+      (language) => {
+        this.language = language;
+        console.log(this.language);
+        this.HeadOfficeAddress = this.language.find(i => i.Name === 'HeadOfficeAddress').Value;
+        this.HeadOfficePhone = this.language.find(i => i.Name === 'HeadOfficePhone').Value;
+        this.HeadOfficeWorkDay = this.language.find(i => i.Name === 'HeadOfficeWorkDay').Value;
+        this.HeadeOffice = this.language.find(i => i.Name === 'HeadOffice').Value;
+        this.showroom = this.language.find(i => i.Name === 'showroom').Value;
+        this.showroomAdress = this.language.find(i => i.Name === 'showroomAdress').Value;
 
+      }
+    );
+  }
 }

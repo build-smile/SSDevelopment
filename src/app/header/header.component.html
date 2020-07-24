@@ -16,35 +16,47 @@
     <ul class="navbar-nav mr-auto fontSize15">
 
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >{{homeText}}<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" [routerLink]="[ '/' ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >{{homeText}}<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/aboutus' ]">{{aboutUsText}}</a>
+        <a class="nav-link text-white" [routerLink]="[ '/aboutus' ]">{{aboutUsText}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/portfolio' ]">{{portfolioText}}</a>
+        <a class="nav-link text-white" [routerLink]="[ '/portfolio' ]">{{portfolioText}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/ecatalog' ]">E-CATALOG</a>
+        <a class="nav-link text-white" [routerLink]="[ '/ecatalog' ]">E-CATALOG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link font-weight-bold" [routerLink]="[ '/contactus' ]" routerLinkActive="active">{{contactUsText}}</a>
+        <a class="nav-link text-white" [routerLink]="[ '/contactus' ]" routerLinkActive="active">{{contactUsText}}</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link font-weight-bold" href="javascript: location.reload();" (click)="switchLanguage()" >
-          <span>TH</span>/<span class="FocusEN">EN</span></a>
-      </li>
+
     </ul>
 
 
 
   </div>
-  <div class="collapse navbar-collapse ml-5 " id="navbarCollapse" style="background-color: orange;position: relative;">
-    <ul class="navbar fontSize25 vertical-center" style="background-color: orange;">
+  <div class="collapse navbar-collapse  " id="navbarCollapse"
+  style="background-color: orange; position: relative;">
+    <ul class="navbar fontSize25 vertical-center"
+    style="background-color: orange; position: absolute; right: 0px;">
       <li class="nav-item mr-3"><i class="fab fa-line text-white icon-smaller"></i></li>
       <li class="nav-item mr-3"><i class="fas fa-phone-square-alt text-white icon-smaller"></i></li>
       <li class="nav-item mr-3"><i class="fas fa-envelope text-white icon-smaller"></i></li>
+      <!-- <li class="nav-item mr-3">
+        <a href="javascript: location.reload();" (click)="switchLanguage()" >
+          <i class="fas fa-globe"></i>
+        </a>
+
+      </li> -->
+
+      <li class="nav-item mr-3">
+        <a class="text-white"  style="font-size:15px;" href="javascript: location.reload();" (click)="switchLanguage()" >
+          <span>TH</span> | <span class="FocusEN">EN</span>
+        </a>
+
+      </li>
 
     </ul>
   </div>

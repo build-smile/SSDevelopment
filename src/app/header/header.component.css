@@ -1,8 +1,9 @@
 .bg-light {
-  background-color: #aaaeb373 !important;
+  background-color: #65605cdb !important;
 }
 .bg-dark {
-  background-color: #65605cad  !important;
+  background-color: #00000075  !important;
+  padding-right: 0px;
 }
 .fontSize18 {
   font-size: 18px;
@@ -41,6 +42,7 @@ a:hover {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #343a40;
 }
+
 
 @media (min-width: 768px)
 {

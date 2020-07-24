@@ -55,3 +55,21 @@
 .text-white{
   color: white;
 }
+.text-red{
+ color: red;
+}
+.text-blue{
+  color: blue;
+ }
+ .text-pink{
+  color: pink;
+ }
+ .text-green{
+  color: greenyellow;
+ }
+ .text-sky{
+  color: rgb(24, 166, 223);
+ }
+.f-large{
+  font-size: x-large;
+}
