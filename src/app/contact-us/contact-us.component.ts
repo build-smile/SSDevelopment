@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { LanguageService } from '../shared/language.service';
 import { Language } from '../shared/language.model';
+import {GoogleMapsModule, MapInfoWindow, MapMarker} from '@angular/google-maps';
 
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.css']
+  styleUrls: ['./contact-us.component.css'],
+
 })
 export class ContactUsComponent implements OnInit {
-
   constructor(private domSanitizer: DomSanitizer, private languageService: LanguageService ) { }
-
+  @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow;
   headQurter = ` สำนักงานใหญ่และโรงงาน
   ที่อยู่: 29/37 หมู่2 ถนนเอกชัย-บางบอน ต.บางน้ำจืด อ.เมือง จ.สมุทรสาคร 74000
   โทรศัพท์: 034-824-398, 034-824-399
@@ -41,12 +42,57 @@ export class ContactUsComponent implements OnInit {
 
   languageCode: string;
   language: Language[];
+  infoContent = '';
+  zoom = 200;
+  center: google.maps.LatLngLiteral =  {lat: 13.6166293, lng: 100.3480447};
+  options: google.maps.MapOptions = {
+    mapTypeId: 'roadmap',
+    zoomControl: false,
+    scrollwheel: false,
+    disableDoubleClickZoom: true,
+    maxZoom: 15,
+    minZoom: 8
+  };
+  mmarker = [];
+  markerOptions: google.maps.MarkerOptions = {draggable: false};
+  markerPositions: google.maps.LatLngLiteral = {lat: 13.6166293, lng: 100.3480447};
+
+
+  openInfoWindow(marker: MapMarker) {
+    this.infoWindow.open(marker);
+  }
+
+  // addMarker(event: google.maps.MouseEvent) {
+  //   this.markerPositions.push(event.latLng.toJSON());
+  // }
 
 
   ngOnInit() {
     this.safeSrcMap = this.domSanitizer.bypassSecurityTrustResourceUrl(this.srcMap);
     this.languageCode = this.languageService.initLanguage();
     this.getLanguage();
+    navigator.geolocation.getCurrentPosition((position) => {
+      this.center = {
+        lat: 13.6166293, //position.coords.latitude,
+        lng: 100.3480447, // position.coords.longitude,
+      };
+    });
+    this.mmarker.push({
+      position: {
+        lat: 13.6166293, //position.coords.latitude,
+        lng: 100.3480447, // position.coords.longitude,
+      },
+      label: {
+        color: 'red',
+        text: 'Marker label ' + (this.mmarker.length + 1),
+      },
+      title: 'Marker title ' + (this.mmarker.length + 1),
+      info: 'Marker info ' + (this.mmarker.length + 1),
+      options: {
+        animation: google.maps.Animation.BOUNCE,
+      },
+    });
+    this.openInfoWindow(this.mmarker[0]);
   }
   getLanguage() {
     this.languageService.getLanguage(this.languageCode, 'contactus').subscribe(
@@ -66,4 +112,5 @@ export class ContactUsComponent implements OnInit {
       }
     );
   }
+
 }

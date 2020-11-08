@@ -14,11 +14,8 @@ export class HomeComponent implements OnInit {
   './assets/image/slide/3.jpg',
   './assets/image/slide/4.jpg',
   './assets/image/slide/5.jpg',
-  './assets/image/slide/6.png',
-  './assets/image/slide/7.png',
-  './assets/image/slide/8.jpg',
-  './assets/image/slide/9.jpg',
-  './assets/image/slide/10.jpg'];
+  './assets/image/slide/6.jpg',
+  './assets/image/slide/7.jpg'];
 
   languageCode: string;
   language: Language[];

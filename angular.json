@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -27,14 +27,19 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css",
-              "src/w3.css"
+              "src/w3.css",
+              "src/slick/slick.css",
+              "src/slick/slick-theme.css"
 
             ],
             "scripts": [  "node_modules/jquery/dist/jquery.slim.js",
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
             "src/slick.js",
-          "node_modules/jquery/dist/jquery.min.js"]
+          "node_modules/jquery/dist/jquery.min.js",
+          "src/slick/slick.js"
+
+        ]
           },
           "configurations": {
             "production": {
@@ -49,7 +54,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,

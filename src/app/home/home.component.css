@@ -9,6 +9,13 @@ body {
 }
 
 
+
+.bg-history{
+  /* background-size: 100vw 100vh; */
+  background: url('../../assets/image/historyBG.JPG');
+  background-size:contain;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -26,18 +33,18 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  /*height: 28rem;*/
+  height:100vh;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  /*height: 28rem;*/
+  height: 100vh;
 }
 
-element.style {
-}
 .carousel-control-prev {
     left: 0;
 }

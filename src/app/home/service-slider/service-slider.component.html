@@ -1,4 +1,4 @@
-<div class="Container mt-5" style="background-color: slategray; ">
+<!-- <div class="Container mt-5" style="background-color: slategray; ">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -45,6 +45,30 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
+</div> -->
+<div class="service-slider Container mt-6" style="z-index: unset;">
+  <carousel  cellWidth="50" cellsToShow=4 loop="true" autoplay="true" borderRadius="2"
+   height=500
+  autoplayInterval="2000">
 
+    <div class="carousel-cell" *ngFor="let item of cardImg1" style="padding: 3px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <img [src]="item.img" alt="Notebook" style="width: 200px;">
+        </div>
+        <div class="row justify-content-center pt-2">
+          <p class="font-weight-bold" style="text-align: center;">{{item.name}}</p>
+        </div>
+        <div class="row">
+          <p class="text-break" >{{item.desc}}</p>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </carousel>
+</div>
 

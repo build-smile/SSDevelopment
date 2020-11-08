@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private languageService: LanguageService) { }
   languageCode: string;
   language: Language[];
+  languageText = 'TH';
 
   homeText: string;
   aboutUsText: string;
@@ -25,6 +26,11 @@ export class HeaderComponent implements OnInit {
 
   }
   getLanguage() {
+
+    if(this.languageCode === 'en'){
+      this.languageText = 'TH';
+    }
+    else  {this.languageText = 'EN';}
     this.languageService.getLanguage(this.languageCode, 'header').subscribe(
       (language) => {
         this.language = language;

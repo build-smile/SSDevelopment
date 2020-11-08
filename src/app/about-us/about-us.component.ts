@@ -13,6 +13,7 @@ export class AboutUsComponent implements OnInit {
   languageCode: string;
   language: Language[];
   profileCompany: string;
+  content = [];
 
   constructor(private router: Router, private languageService: LanguageService) {
     this.languageCode = this.languageService.initLanguage();
@@ -22,7 +23,6 @@ export class AboutUsComponent implements OnInit {
   ngOnInit() {
 
       window.scrollTo(0, 0);
-
   }
 
   getLanguage() {
@@ -33,9 +33,11 @@ export class AboutUsComponent implements OnInit {
 
         console.log(this.language);
         this.profileCompany = this.language.find(i => i.Name === 'profile_company').Value;
-
+        this.content = this.profileCompany.split('$');
       }
     );
   }
+
+
 
 }

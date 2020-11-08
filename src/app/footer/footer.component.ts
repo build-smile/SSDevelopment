@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Language } from '../shared/language.model';
 import { LanguageService } from '../shared/language.service';
+
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +11,7 @@ import { LanguageService } from '../shared/language.service';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private languageService: LanguageService) { }
+  constructor(private languageService: LanguageService , private http: HttpClient) { }
   languageCode: string;
   language: Language[];
   HeadOfficeAddress: string;
@@ -18,9 +20,18 @@ export class FooterComponent implements OnInit {
   HeadeOffice: string;
   showroom: string;
   showroomAdress: string;
+  mailUrl = 'https://ssdevelopment.co.th/api/sentMail.php';
   ngOnInit() {
     this.getLanguage();
   }
+
+  async SentMail(formValue: any){
+    console.log(formValue);
+    const myHeaders = {'Content-Type': 'application/json'};
+    const res = await this.http.post<string>(this.mailUrl, formValue);
+    await alert(res);
+  }
+
   getLanguage() {
     this.languageService.getLanguage(this.languageCode, 'footer').subscribe(
       (language) => {

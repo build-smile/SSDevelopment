@@ -13,8 +13,9 @@ import { ServiceSliderComponent } from './home/service-slider/service-slider.com
 import { OurclientComponent } from './home/ourclient/ourclient.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ECatalogComponent } from './e-catalog/e-catalog.component';
-
-
+import { GoogleMapsModule } from '@angular/google-maps';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,12 +30,18 @@ import { ECatalogComponent } from './e-catalog/e-catalog.component';
     ServiceSliderComponent,
     OurclientComponent,
     PortfolioComponent,
-    ECatalogComponent
+    ECatalogComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GoogleMapsModule,
+    IvyCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
+
 
   ],
   providers: [],

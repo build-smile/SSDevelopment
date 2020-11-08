@@ -33,7 +33,25 @@
     </div>
 
 
+    <div class="container mb-2">
+      <google-map [center]="center"  [options]="options"
+      [zoom]="zoom">
+      <map-marker #markerElem
+      [position]="markerPositions"
+      label="SS development"
+      title="SS development"
+      options="marker.options"
+      (mapClick)="openInfoWindow(markerElem)"
+      >
+    </map-marker>
 
+      <map-info-window>SS Development
+        {{headAddress}}
+
+      </map-info-window>
+    </google-map>
+
+    </div>
 
 
 

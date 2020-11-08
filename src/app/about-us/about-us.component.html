@@ -12,7 +12,7 @@
 
   <div class="w3-col m6 w3-padding-large">
     <h1 class="w3-center text-orange">SS DEVELOPMENT</h1><br>
-    <p class="w3-large">{{profileCompany}}</p>
+    <p *ngFor="let item of content">{{item}}</p>
 
   </div>
 
@@ -26,3 +26,8 @@
 <div class="container mb-2">
 <img class="img-fluid" alt="Responsive image" src="../../assets/image/BusinessLines.jpg" >
 </div>
+
+
+
+
+<!-- Use custom zoom buttons -->

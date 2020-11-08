@@ -42,12 +42,22 @@ a:hover {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #343a40;
 }
-
-
-@media (min-width: 768px)
+.navbar-brand{
+margin-right: 25%;
+}
+.navbar-nav{
+ margin-right: 15%;
+}
+@media (min-width: 960px)
 {
 .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 1.5rem;
     padding-left: 0.5rem;
 }
+.navbar-brand{
+  margin-right: 5%;
+ }
+
+/* 960  768*/
+
 }
