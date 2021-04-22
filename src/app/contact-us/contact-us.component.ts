@@ -68,6 +68,7 @@ export class ContactUsComponent implements OnInit {
 
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.safeSrcMap = this.domSanitizer.bypassSecurityTrustResourceUrl(this.srcMap);
     this.languageCode = this.languageService.initLanguage();
     this.getLanguage();

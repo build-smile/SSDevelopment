@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ourclient',
-  templateUrl: './ourclient.component.html',
-  styleUrls: ['./ourclient.component.css']
+  selector: 'app-ourclient-addition',
+  templateUrl: './ourclient-addition.component.html',
+  styleUrls: ['./ourclient-addition.component.css']
 })
-export class OurclientComponent implements OnInit {
+export class OurclientAdditionComponent implements OnInit {
 
   ourClient1 =
   ['assets/image/home_clients/bangkokAirway.png',
@@ -36,10 +36,6 @@ export class OurclientComponent implements OnInit {
     {
       name: 'JBIC',
       img: 'assets/image/home_clients/JBIC.png',
-    },
-    {
-      name: 'กูลิโกะ',
-      img: 'assets/image/home_clients/GULICO.png',
     }
   ];
 
@@ -48,7 +44,7 @@ export class OurclientComponent implements OnInit {
   [
     {
       name: 'kinokuniya',
-      img: 'assets/image/home_clients/kinokuniya.png',
+      img: 'assets/image/home_clients/kinokuniya.jpg',
     },
     {
       name: 'MU',
@@ -65,19 +61,12 @@ export class OurclientComponent implements OnInit {
     {
       name: 'toyota',
       img: 'assets/image/home_clients/toyota.png',
-    },
-    {
-      name: 'ISUZU',
-      img: 'assets/image/home_clients/ISUZU.png',
     }
 
   ];
-
   constructor() { }
 
-  ngOnInit() {
-
-
+  ngOnInit(): void {
   }
 
 }

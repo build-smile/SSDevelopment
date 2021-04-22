@@ -1,0 +1,100 @@
+<div class="container mb-5" style="margin-top: 100px;">
+
+<!-- Trigger the Modal -->
+<div class="row">
+  <div class="col">
+    <img *ngFor="let item of srcList" id="myImg" [src]="item"
+    alt="Snow" style="width:100%;max-width:200px;height:120px; padding: 5px;"
+    (click)="showPictuerPopup(item)">
+  </div>
+</div>
+
+
+
+
+<!-- The Modal -->
+<div class="modal" [ngStyle]="{display:modelDisplay}" >
+
+  <!-- The Close Button -->
+  <a (click)="ClosePictuerPopup()">
+    <span class="close" style="top:20%;left: 80%;">&times;</span>
+  </a>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01" [src]="srcPic">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+  <a (click)="prevImg(srcPic)" class="carousel-control-prev" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a (click)="nextImg(srcPic)" class="carousel-control-next"  data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+</div>
+
+
+<div class="container">
+  <h5> Our Client</h5>
+<ul>
+  <li>ABB Co.,Ltd.</li>
+  <li>Air China Office (Bangkok International Airport)</li>
+  <li>AIWA Co., Ltd.</li>
+  <li>	Akamon restaurant (Sukhumvit 21)	</li>
+<li>	Bake a wish Japanese dessert	</li>
+<li>	Bangkok Airways Co.,Ltd.	</li>
+<li>	Bangkok Handicraft Center Co.,Ltd	</li>
+<li>	Bar B Q Plaza Restaurant	</li>
+<li>	Cathay Trust Co., Ltd.	</li>
+<li>	Central Cancer Hospital (Phaholyothin)	</li>
+<li>	Christiani & Nielsen Co., Ltd	</li>
+<li>	C.P. Inter food (Thailand) Co., Ltd.	</li>
+<li>	Expressway Tolls Building	</li>
+<li>	Eagle Industry Co., Ltd.	</li>
+<li>	EKK Eagle (Thailand) Co., Ltd.	</li>
+<li>	Fortune River View Hotel (Chiang khong)	</li>
+<li>	Hakata Restaurant	</li>
+<li>	Hoshigaoka Japanese restaurant	</li>
+<li>	Inoac Tokai Thailand Co.,Ltd.	</li>
+<li>	Isetan Department store	</li>
+<li>	Isuzu Executive conference room	</li>
+<li>	Japan Bank International Corporation	</li>
+<li>	Kiarti Thanee City Mansion	</li>
+<li>	Kiarti Thanee Country Club	</li>
+<li>	Kinokuniya Bookstore (Emquartier)	</li>
+<li>	Kinokuniya Bookstore (Isetan)	</li>
+<li>	Kinokuniya Bookstore (Siam Paragon)	</li>
+<li>	Kumi (Thailand)	</li>
+<li>	Mahidol University International College	</li>
+<li>	Mahidol University	</li>
+<li>	Phila Delphia Core state Bank	</li>
+<li>	Royal Contry Golf Club	</li>
+<li>	Royal Gems International	</li>
+<li>	Royal Thai Herb	</li>
+<li>	Sakata - Thai Construction	</li>
+<li>	Seiko Factory (Navanakorn Industrial Estate)	</li>
+<li>	Shisedo Showroom (Isetan)	</li>
+<li>	Siam A & C Co., Ltd.	</li>
+<li>	Skylark Restaurant (Sukhumvit 21)	</li>
+<li>	Stanley Factory	</li>
+<li>	Thai Glico Factory	</li>
+<li>	Thai Kawasumi Co., Ltd.	</li>
+<li>	Thai Nishimatsu Construction	</li>
+<li>	The Pan Pacific hotel	</li>
+<li>	Tokyu Department Store	</li>
+<li>	Toyota Motors New Plant Factory	</li>
+<li>	Toyota Motors Training Center	</li>
+<li>	TS Tech (Thailand)	</li>
+<li>	Wakatsuki Jewelry	</li>
+<li>	World Gems Collection Co., Ltd.	</li>
+<li>	Yamaha Motor Asian Center Co., Ltd.	</li>
+
+
+</ul>
+
+
+
+</div>

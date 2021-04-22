@@ -1,0 +1,11 @@
+.carousel-item{
+  height: 100vh;
+}
+.carousel-caption{
+  width: 990px;
+  background-color: #17101059;
+  height: 150px;
+}
+.row{
+  text-align: left;
+}

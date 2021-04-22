@@ -1,3 +1,4 @@
+import { DetailsComponent } from './portfolio/details/details.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -13,11 +14,12 @@ const routes: Routes = [
   {path: 'contactus', component: ContactUsComponent},
   {path: 'aboutus', component: AboutUsComponent},
   {path: 'portfolio', component: PortfolioComponent},
-  {path: 'ecatalog', component: ECatalogComponent}
+  {path: 'ecatalog', component: ECatalogComponent},
+  {path: 'DetailPortfolio', component: DetailsComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

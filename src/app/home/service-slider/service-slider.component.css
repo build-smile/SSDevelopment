@@ -14,10 +14,16 @@
   padding: 10px; /* Some padding */
   height: 20%;
 }
+.service-slider-mobile{
+  display: none;
+}
 /*--responsive for mobile phone--*/
-@media(max-width:720px){
+@media(max-width:995px){
 
   .service-slider{
-    opacity: 0;
+    display: none;
+  }
+  .service-slider-mobile{
+    display: block;
   }
 }

@@ -16,19 +16,20 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <img [src]="Banner[0]">
+    <img [src]="Banner[0].url">
       <div class="container">
-        <div class="carousel-caption text-left">
-
+        <div class="carousel-caption text-center">
+          <p>{{Banner[0].content}}</p>
         </div>
       </div>
     </div>
-    <div class="carousel-item fullCarousel" *ngFor="let item of Banner |slice:1;let i=index;">
+    <div class="carousel-item fullCarousel align-items-center"
+    *ngFor="let item of Banner |slice:1;let i=index;">
 
-      <img [src]="item">
+      <img [src]="item.url">
       <div class="container">
-        <div class="carousel-caption text-left">
-
+        <div class="carousel-caption text-center">
+          <p>{{item.content}}</p>
         </div>
       </div>
     </div>
@@ -58,7 +59,7 @@
 
 
   <!-- START THE FEATURETTES -->
-  <div class="row featurette mb-3 bg-history" style="height: 70vh;"  >
+  <div class="row featurette mb-3 bg-history"  >
     <div class="col-md-7 order-md-1 " >
       <h1 class="font-weight" >SS DEVELOPMENT</h1>
       <p class="lead">{{profileCompany}}
@@ -68,7 +69,7 @@
       [routerLink]="[ '/aboutus' ]">Read More</button>
     </div>
     <div class="col-md-5 order-md-2 ml-0 pt-2">
-      <img src="../../assets/image/myCompany.jpg" width="400" height="300"/>
+      <img class="home-myCompany" src="../../assets/image/myCompany.jpg" width="400" height="300"/>
 
     </div>
   </div>
@@ -77,23 +78,22 @@
 
   <!-- <hr class="featurette-divider"> -->
 
-<app-service-slider></app-service-slider>
-
+  <app-service-slider></app-service-slider>
 
 
   <!-- <hr class="featurette-divider order-md-2"> -->
 
   <div class="row featurette order-md-1 mt-5">
-    <div class="col-md-6 order-md-1">
-      <iframe width="500" height="315" src="https://www.youtube.com/embed/Y4B4zLDYtaA" frameborder="0"
+    <div class="col-md-6 order-md-1 col-sm-12">
+      <iframe class="video-home" width="500" height="315" src="https://www.youtube.com/embed/Y4B4zLDYtaA" frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
     </iframe>
     </div>
 
 
-      <div class="col-md-6 order-md-2">
+      <div class="col-md-6 order-md-2 col-sm-12">
         <div class="Flipsnack">
-          <iframe src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=f7tibifnv"
+          <iframe class="video-home" src="https://cdn.flipsnack.com/widget/v2/widget.html?hash=f7tibifnv"
           width="500" height="315" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen>
         </iframe>
         <!-- <iframe src="https://online.flippingbook.com/view/768196/"

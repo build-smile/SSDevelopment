@@ -3,7 +3,7 @@
 </div>
 
 
- <div class="Container" style="background:url('../assets/image/footer.png'); background-size: contain;">
+ <div class="Container bg-footer">
 
  <footer class="ml-5">
   <div class="row">
@@ -51,15 +51,8 @@
         </li>
 
 
-
-
-
-
-
-
-
-
       </ul>
+      <img src="../../assets/image/DBD.png" width="150px">
     </div>
     <div class="col-6 col-md">
       <h5 class="FontWhite">{{showroom}}</h5>
@@ -142,27 +135,27 @@
   </div>
 
   <div class="row mt-3">
-    <div class="col"></div>>
+    <div class="col"></div>
     <div class="col-8">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link FontWhite" href="#">HOME</a>
+          <a class="nav-link FontWhite" [routerLink]="[ '/' ]">HOME</a>
         </li>
         <li class="nav-item FontWhite">
-          <a class="nav-link" href="#">ABOUT US</a>
+          <a class="nav-link" [routerLink]="[ '/aboutus' ]">ABOUT US</a>
         </li>
         <li class="nav-item FontWhite">
-          <a class="nav-link" href="#">PORTFOLIOS</a>
+          <a class="nav-link" [routerLink]="[ '/portfolio' ]">PORTFOLIOS</a>
         </li>
         <li class="nav-item FontWhite">
-          <a class="nav-link FontWhite" href="#">E-CATALOG</a>
+          <a class="nav-link FontWhite" [routerLink]="[ '/ecatalog' ]">E-CATALOG</a>
         </li>
         <li class="nav-item FontWhite">
-          <a class="nav-link FontWhite" href="#">CONTACT US</a>
+          <a class="nav-link FontWhite" [routerLink]="[ '/contactus' ]">CONTACT US</a>
         </li>
       </ul>
 
-    </div>>
+    </div>
 
   </div>
 </footer>

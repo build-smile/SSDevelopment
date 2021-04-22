@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../shared/language.service';
-import {Language } from '../shared/language.model';
+import { Language } from '../shared/language.model';
+import { CommonModule } from '@angular/common';
 import { from } from 'rxjs';
 
 @Component({
@@ -8,6 +9,7 @@ import { from } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
   constructor(private languageService: LanguageService) { }
@@ -19,6 +21,15 @@ export class HeaderComponent implements OnInit {
   aboutUsText: string;
   portfolioText: string;
   contactUsText: string;
+
+
+
+  NavMobileStyles = {
+    fontSize: '3em',
+    backgroundColor: 'ivory',
+    color: 'maroon'
+  };
+
   ngOnInit() {
 
     this.languageCode = this.languageService.initLanguage();
@@ -27,10 +38,11 @@ export class HeaderComponent implements OnInit {
   }
   getLanguage() {
 
-    if(this.languageCode === 'en'){
+    if (this.languageCode === 'en') {
       this.languageText = 'TH';
     }
-    else  {this.languageText = 'EN';}
+    else { this.languageText = 'EN'; }
+    // tslint:disable-next-line: deprecation
     this.languageService.getLanguage(this.languageCode, 'header').subscribe(
       (language) => {
         this.language = language;
@@ -53,5 +65,14 @@ export class HeaderComponent implements OnInit {
     this.languageCode = localStorage.getItem('language');
     this.getLanguage();
 
+  }
+
+  openNavbar() {
+    const myLinks = document.getElementById('myLinks');
+    if (myLinks.style.display === 'block') {
+      myLinks.style.display = 'none';
+    } else {
+      myLinks.style.display = 'block';
+    }
   }
 }

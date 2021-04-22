@@ -10,9 +10,21 @@
  color: white;
  font-family: sukhumvit;
 }
-
+.bg-footer{
+  background:url('../../assets/image/footer.png');
+ background-size: contain;
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
+  }
+
+
+}
+
+@media(max-width:995px){
+  .bg-footer{
+    background:#524d4d;
+   background-size: contain;
   }
 }
