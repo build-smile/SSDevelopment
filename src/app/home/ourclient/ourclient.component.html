@@ -1,11 +1,26 @@
-
- <div  class="Container mt-5" style="background-color: #FFBD01;">
+<div class="Container mt-5" style="background-color: #FFBD01;">
   <div class="container">
     <h3 class="font-weight-bold text-center pt-3">OUR CLIENT</h3>
   </div>
 
+  <div class="row">
+    <div class="col-lg-2 col-md-3" *ngFor="let item of ourClient">
+      <div class="container" style="padding-bottom: 20px;">
+        <img class="image img-fluid img-ourclient" [src]="item.img" alt="Lights" width="100px" height="50px">
+        <div class="overlay">
+          <div class="text"> {{item.name}} </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="mx-auto">
+</div>
+
+
+
+
+
+<!-- <div class="mx-auto">
     <div class="row mx-auto">
       <div class="col-lg-2 col-md-3" *ngFor="let item of ourClient">
         <div class="container" style="padding-bottom: 20px;">
@@ -32,5 +47,4 @@
   </div>
 
 
-</div>
-
+</div> -->

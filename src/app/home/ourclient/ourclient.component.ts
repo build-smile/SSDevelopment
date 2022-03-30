@@ -41,11 +41,7 @@ export class OurclientComponent implements OnInit {
       name: 'กูลิโกะ',
       img: 'assets/image/home_clients/GULICO.png',
     }
-  ];
-
-
-  ourClient2 =
-  [
+ ,
     {
       name: 'kinokuniya',
       img: 'assets/image/home_clients/kinokuniya.png',
